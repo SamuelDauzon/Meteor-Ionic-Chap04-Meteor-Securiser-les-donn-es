@@ -1,0 +1,13 @@
+<head>
+  <title>securiser-les-donnees</title>
+</head>
+
+<body>
+  {{>listerProduits}}
+</body>
+
+<template name="listerProduits">
+  {{#each produits}}
+    {{nom}} ({{prix}}€)<br />
+  {{/each}}
+</template>
