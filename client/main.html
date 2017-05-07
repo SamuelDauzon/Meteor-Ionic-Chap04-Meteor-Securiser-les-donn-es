@@ -3,11 +3,20 @@
 </head>
 
 <body>
+  <h2>Liste de produits</h2>
   {{>listerProduits}}
+  <h2>Liste de fournisseurs</h2>
+  {{>listerFournisseurs}}
 </body>
 
 <template name="listerProduits">
   {{#each produits}}
     {{nom}} ({{prix}}€)<br />
+  {{/each}}
+</template>
+
+<template name="listerFournisseurs">
+  {{#each fournisseurs}}
+    {{nom}}<br />
   {{/each}}
 </template>

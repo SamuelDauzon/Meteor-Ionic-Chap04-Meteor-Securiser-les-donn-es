@@ -5,3 +5,9 @@ Template.listerProduits.helpers({
     return ProduitsCollection.find();
   }
 });
+
+Template.listerFournisseurs.helpers({
+  'fournisseurs': function() {
+    return FournisseursCollection.find();
+  }
+});

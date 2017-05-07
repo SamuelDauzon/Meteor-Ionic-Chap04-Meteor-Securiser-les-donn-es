@@ -7,4 +7,9 @@ Meteor.startup(function () {
     ProduitsCollection.insert({nom: "Peinture satinée noire", prix: 69, disponible:true});
     ProduitsCollection.insert({nom: "Peinture satinée blanche", prix: 59, disponible:true});
   }
+  if (!FournisseursCollection.find({}).count()) {
+    FournisseursCollection.insert({nom: "Rêve peintures", professionnel:false});
+    FournisseursCollection.insert({nom: "Peintures resist'MAX", professionnel:true});
+    FournisseursCollection.insert({nom: "Peinture Durand", professionnel:true});
+  }
 });
