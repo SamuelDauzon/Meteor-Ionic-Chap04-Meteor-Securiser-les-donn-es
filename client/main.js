@@ -6,8 +6,17 @@ Template.listerProduits.helpers({
   }
 });
 
-Template.listerFournisseurs.helpers({
-  'fournisseurs': function() {
-    return FournisseursCollection.find();
+Template.ajouterProduit.events({
+  'submit form': function(event) {
+    event.preventDefault();
+    ProduitsCollection.insert({
+      nom: event.target.nom.value,
+      prix: event.target.prix.value,
+      disponible: event.target.disponible.checked,
+    });
+    event.target.nom.value = '';
+    event.target.prix.value = '';
+    event.target.disponible.checked = false;
+    event.stopPropagation();
   }
 });
