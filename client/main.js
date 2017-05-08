@@ -11,7 +11,7 @@ Template.ajouterProduit.events({
     event.preventDefault();
     Meteor.call('produits.insert', {
       nom: event.target.nom.value,
-      prix: event.target.prix.value,
+      prix: Number(event.target.prix.value),
       disponible: event.target.disponible.checked,
     });
     event.target.nom.value = '';
