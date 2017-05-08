@@ -9,7 +9,7 @@ Template.listerProduits.helpers({
 Template.ajouterProduit.events({
   'submit form': function(event) {
     event.preventDefault();
-    ProduitsCollection.insert({
+    Meteor.call('produits.insert', {
       nom: event.target.nom.value,
       prix: event.target.prix.value,
       disponible: event.target.disponible.checked,
