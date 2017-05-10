@@ -15,7 +15,7 @@ Template.ajouterProduit.events({
       disponible: event.target.disponible.checked,
     }, (err) => {
       if (err) {
-        alert("Données refusées : "+err);
+        alert("Données refusées : "+err.details);
       } else {
         alert("Document ajouté");
       }
