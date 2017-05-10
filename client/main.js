@@ -13,6 +13,12 @@ Template.ajouterProduit.events({
       nom: event.target.nom.value,
       prix: Number(event.target.prix.value),
       disponible: event.target.disponible.checked,
+    }, (err) => {
+      if (err) {
+        alert("Données refusées : "+err);
+      } else {
+        alert("Document ajouté");
+      }
     });
     event.target.nom.value = '';
     event.target.prix.value = '';
